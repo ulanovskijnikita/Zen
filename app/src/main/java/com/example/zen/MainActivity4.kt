@@ -24,38 +24,6 @@ class MainActivity4 : AppCompatActivity() {
         binding = ActivityMain4Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //  Retrofit emotions
-//        val emotionRes:RecyclerView = findViewById(R.id.recyclerEmotions)
-//        val retrofitEmotions = MyRetrofit().getRetrofit()
-//        val apiRet = retrofitEmotions.create(RetrofitServieces::class.java)
-//        val retCall:Call<DataE> = apiRet.getImage()
-//        retCall.enqueue(object:retrofit2.Callback<DataE> {
-//            override fun onResponse(call: Call<DataE>, response: Response<DataE>) {
-//                if (response.isSuccessful) {
-//                    emotionRes.adapter = response.body()?.let { EmotionsAdapter(applicationContext, it.data) }
-//                }
-//            }
-//            override fun onFailure(call: Call<DataE>, t: Throwable) {
-//                Toast.makeText(applicationContext, t.localizedMessage, Toast.LENGTH_SHORT).show()
-//            }
-//        })
-//
-//        //  Retrofit quotes
-//        val quotesRes:RecyclerView = findViewById(R.id.recyclerVertical)
-//        val retrofitQuotes = MyRetrofit().getRetrofit()
-//        val apiQuotes = retrofitQuotes.create(Quotes::class.java)
-//        val quotesCall:Call<DataQ> = apiQuotes.getQuotes()
-//        quotesCall.enqueue(object:retrofit2.Callback<DataQ> {
-//            override fun onResponse(call: Call<DataQ>, response: Response<DataQ>) {
-//                if (response.isSuccessful) {
-//                    quotesRes.adapter = response.body()?.let { adapter2(applicationContext, it.data) }
-//                }
-//            }
-//            override fun onFailure(call: Call<DataQ>, t: Throwable) {
-//                Toast.makeText(applicationContext, t.localizedMessage, Toast.LENGTH_SHORT).show()
-//            }
-//        })
-
 //        Fragments
         val fragmentAdapter = MainActivity4Adapter(this, fragmentList)
         binding.viewPager.adapter = fragmentAdapter
